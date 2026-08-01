@@ -30,15 +30,17 @@ unzip -q rawdata.zip
 # 1. Create a directory named data
 mkdir data
 # 2. Move the ./rawdata directory to ./data/raw (eg. move it into ./data and rename it to raw)
-mv 'C:\Users\Ynahd\Documents\DSI\shell\newproject\rawdata' 'C:\Users\Ynahd\Documents\DSI\shell\data'
-mv data/rawdata data/raw
+mv rawdata data/raw
 # 3. List the contents of the ./data/raw directory
 ls ./data/raw
 # 4. Create the directory ./data/processed, 
 #    then create the following sub-directories within it: server_logs, user_logs, and event_logs
-mkdir -p ./processed/server_logs ./processed/user_logs ./processed/event_logs
+mkdir data/processed
+mkdir ./data/processed/server_logs
+mkdir ./data/processed/user_logs
+mkdir ./data/processed/event_logs
 # 5. Copy all server log files (files with "server" in the name AND a .log extension) from ./data/raw to ./data/processed/server_logs
-cp ./raw/*server*.log ./processed/server_logs
+cp ./data/raw/*server*.log ./data/processed/server_logs
 # 6. Repeat the above step for user logs and event logs
 cp ./raw/*user*.log ./processed/user_logs
 cp ./raw/*event*.log ./processed/event_logs
