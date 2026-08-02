@@ -1,3 +1,5 @@
+data/processed/inventory.txt
+
 data/processed/user_logs:
 user_log_9.log
 user_log_8.log
